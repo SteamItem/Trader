@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.8"
 
 services:
   postgres:
@@ -26,20 +26,40 @@ services:
       - pgadmin-data:/var/lib/pgadmin
     links:
       - "postgres:pgsql-server"
-  rabbitmq:
-    image: rabbitmq:3-management-alpine
+  mongo:
+    image: mongo:latest
     restart: always
-    volumes:
-      - rabbitmq-etc:/etc/rabbitmq/
-      - rabbitmq-lib:/var/lib/rabbitmq/
-      - rabbitmq-log:/var/log/rabbitmq/
     environment:
-      RABBITMQ_ERLANG_COOKIE: cookie
-      RABBITMQ_DEFAULT_USER: admin
-      RABBITMQ_DEFAULT_PASS: secret
+      MONGO_INITDB_DATABASE: trader
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: secret
+    volumes:
+      - mongo-data:/data/db
     ports:
-      - 5672:5672
-      - 15672:15672
+      - "27017-27019:27017-27019"
+  mongoexpress:
+    image: mongo-express:latest
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: secret
+    ports:
+        - "8081:8081"
+    links:
+        - mongo
+  # rabbitmq:
+  #   image: rabbitmq:3-management-alpine
+  #   restart: always
+  #   volumes:
+  #     - rabbitmq-etc:/etc/rabbitmq/
+  #     - rabbitmq-lib:/var/lib/rabbitmq/
+  #     - rabbitmq-log:/var/log/rabbitmq/
+  #   environment:
+  #     RABBITMQ_ERLANG_COOKIE: cookie
+  #     RABBITMQ_DEFAULT_USER: admin
+  #     RABBITMQ_DEFAULT_PASS: secret
+  #   ports:
+  #     - 5672:5672
+  #     - 15672:15672
   api:
     restart: always
     build:
@@ -81,6 +101,7 @@ services:
 volumes:
   postgres-data:
   pgadmin-data:
-  rabbitmq-etc:
-  rabbitmq-lib:
-  rabbitmq-log:
+  mongo-data:
+  # rabbitmq-etc:
+  # rabbitmq-lib:
+  # rabbitmq-log:
