@@ -1,0 +1,9 @@
+[submodule "TraderServer"]
+	path = TraderServer
+	url = https://github.com/suphero/TraderServer
+[submodule "TraderPuppet"]
+	path = TraderPuppet
+	url = https://github.com/suphero/TraderPuppet
+[submodule "TraderWeb"]
+	path = TraderWeb
+	url = https://github.com/suphero/TraderWeb
