@@ -1,0 +1,1 @@
+docker container rm vs_mongo
