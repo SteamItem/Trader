@@ -39,11 +39,22 @@
       "HEADLESS": "false",
       "PORT": "3001"
     }
+  }, {
+    "name": "Web",
+    "type": "node",
+    "request": "launch",
+    "cwd": "${workspaceRoot}/TraderWeb",
+    "runtimeExecutable": "npm",
+    "env": {
+      "VUE_APP_API_URL": "http://localhost:3000"
+    },
+    "runtimeArgs": [
+      "run-script", "serve"
+    ],
+    "port": 5858
   }],
-  "compounds": [
-    {
-      "name": "Debug All",
-      "configurations": ["Server", "Puppet"]
-    }
-  ]
+  "compounds": [{
+    "name": "Debug All",
+    "configurations": ["Server", "Puppet", "Web"]
+  }]
 }
