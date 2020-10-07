@@ -1,9 +1,9 @@
 [submodule "TraderServer"]
 	path = TraderServer
-	url = https://github.com/suphero/TraderServer
+	url = https://github.com/SteamItem/TraderServer
 [submodule "TraderPuppet"]
 	path = TraderPuppet
-	url = https://github.com/suphero/TraderPuppet
+	url = https://github.com/SteamItem/TraderPuppet
 [submodule "TraderWeb"]
 	path = TraderWeb
-	url = https://github.com/suphero/TraderWeb
+	url = https://github.com/SteamItem/TraderWeb
