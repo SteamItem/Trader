@@ -1,6 +1,9 @@
 [submodule "TraderServer"]
 	path = TraderServer
 	url = https://github.com/SteamItem/TraderServer
+[submodule "TraderBot"]
+	path = TraderBot
+	url = https://github.com/SteamItem/TraderBot
 [submodule "TraderPuppet"]
 	path = TraderPuppet
 	url = https://github.com/SteamItem/TraderPuppet
