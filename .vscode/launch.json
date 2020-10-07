@@ -19,6 +19,7 @@
       "DB_URL": "mongodb://localhost:27017/trader",
       "RDB_URL": "postgres://postgres:secret@localhost:5432/Trader",
       "PUPPET_API": "http://localhost:3001",
+      "BOT_API": "http://localhost:3002",
       "TELEGRAM_TOKEN": "1271936615:AAH-ZQajPguxAMBp2j6vvLZfe0vN7xeoo1E",
       "TELEGRAM_CHAT_ID": "-367623724",
       "PORT": "3000"
@@ -40,6 +41,24 @@
       "PORT": "3001"
     }
   }, {
+    "type": "node",
+    "request": "launch",
+    "name": "Bot",
+    "program": "./src/server.ts",
+    "runtimeExecutable": "nodemon",
+    "restart": true,
+    "console": "integratedTerminal",
+    "internalConsoleOptions": "neverOpen",
+    "cwd": "${workspaceFolder}/TraderBot",
+    "env": {
+      "NODE_ENV": "development",
+      "DB_URL": "mongodb://localhost:27017/trader",
+      "RDB_URL": "postgres://postgres:secret@localhost:5432/Trader",
+      "TELEGRAM_TOKEN": "1271936615:AAH-ZQajPguxAMBp2j6vvLZfe0vN7xeoo1E",
+      "TELEGRAM_CHAT_ID": "-367623724",
+      "PORT": "3002"
+    }
+  }, {
     "name": "Web",
     "type": "node",
     "request": "launch",
@@ -55,6 +74,6 @@
   }],
   "compounds": [{
     "name": "Debug All",
-    "configurations": ["Server", "Puppet", "Web"]
+    "configurations": ["Server", "Puppet", "Bot", "Web"]
   }]
 }
