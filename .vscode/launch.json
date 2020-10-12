@@ -20,8 +20,8 @@
       "RDB_URL": "postgres://postgres:secret@localhost:5432/Trader",
       "PUPPET_API": "http://localhost:3001",
       "BOT_API": "http://localhost:3002",
-      "TELEGRAM_TOKEN": "1271936615:AAH-ZQajPguxAMBp2j6vvLZfe0vN7xeoo1E",
-      "TELEGRAM_CHAT_ID": "-367623724",
+      "TELEGRAM_TOKEN": "TELEGRAM_TOKEN",
+      "TELEGRAM_CHAT_ID": "TELEGRAM_CHAT_ID",
       "PORT": "3000"
     }
   }, {
@@ -54,8 +54,8 @@
       "NODE_ENV": "development",
       "DB_URL": "mongodb://localhost:27017/trader",
       "RDB_URL": "postgres://postgres:secret@localhost:5432/Trader",
-      "TELEGRAM_TOKEN": "1271936615:AAH-ZQajPguxAMBp2j6vvLZfe0vN7xeoo1E",
-      "TELEGRAM_CHAT_ID": "-367623724",
+      "TELEGRAM_TOKEN": "TELEGRAM_TOKEN",
+      "TELEGRAM_CHAT_ID": "TELEGRAM_CHAT_ID",
       "PORT": "3002"
     }
   }, {
