@@ -1,1 +1,1 @@
-docker run -d -p 26000:80 --name vs_pgadmin -e PGADMIN_DEFAULT_EMAIL=postgres -e PGADMIN_DEFAULT_PASSWORD=secret dpage/pgadmin4
+docker run -d -p 26000:80 --name vs_pgadmin -e PGADMIN_DEFAULT_EMAIL=user@domain.com -e PGADMIN_DEFAULT_PASSWORD=secret dpage/pgadmin4

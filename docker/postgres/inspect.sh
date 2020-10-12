@@ -1,0 +1,1 @@
+docker inspect vs_postgres
