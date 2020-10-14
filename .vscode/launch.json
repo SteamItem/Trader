@@ -6,13 +6,13 @@
   "configurations": [{
     "type": "node",
     "request": "launch",
-    "name": "Server",
+    "name": "Api",
     "program": "./src/server.ts",
     "runtimeExecutable": "nodemon",
     "restart": true,
     "console": "integratedTerminal",
     "internalConsoleOptions": "neverOpen",
-    "cwd": "${workspaceFolder}/TraderServer",
+    "cwd": "${workspaceFolder}/api",
     "env": {
       "NODE_ENV": "development",
       "CORS_WHITELIST": "http://localhost:8080",
@@ -33,7 +33,7 @@
     "restart": true,
     "console": "integratedTerminal",
     "internalConsoleOptions": "neverOpen",
-    "cwd": "${workspaceFolder}/TraderPuppet",
+    "cwd": "${workspaceFolder}/puppet",
     "env": {
       "NODE_ENV": "development",
       "SAVE_SCREENSHOT": "true",
@@ -49,7 +49,7 @@
     "restart": true,
     "console": "integratedTerminal",
     "internalConsoleOptions": "neverOpen",
-    "cwd": "${workspaceFolder}/TraderBot",
+    "cwd": "${workspaceFolder}/bot",
     "env": {
       "NODE_ENV": "development",
       "DB_URL": "mongodb://localhost:27017/trader",
@@ -59,10 +59,10 @@
       "PORT": "3002"
     }
   }, {
-    "name": "Web",
+    "name": "Admin",
     "type": "node",
     "request": "launch",
-    "cwd": "${workspaceRoot}/TraderWeb",
+    "cwd": "${workspaceRoot}/admin",
     "runtimeExecutable": "npm",
     "env": {
       "VUE_APP_API_URL": "http://localhost:3000"
@@ -74,6 +74,6 @@
   }],
   "compounds": [{
     "name": "Debug All",
-    "configurations": ["Server", "Puppet", "Bot", "Web"]
+    "configurations": ["Api", "Puppet", "Bot", "Admin"]
   }]
 }
