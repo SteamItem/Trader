@@ -1,12 +1,15 @@
+[submodule "trader-admin"]
+	path = admin
+	url = https://github.com/SteamItem/trader-admin
 [submodule "trader-api"]
 	path = api
 	url = https://github.com/SteamItem/trader-api
 [submodule "trader-bot"]
 	path = bot
 	url = https://github.com/SteamItem/trader-bot
+[submodule "trader-gateway"]
+	path = gateway
+	url = https://github.com/SteamItem/trader-gateway
 [submodule "trader-puppet"]
 	path = puppet
 	url = https://github.com/SteamItem/trader-puppet
-[submodule "trader-admin"]
-	path = admin
-	url = https://github.com/SteamItem/trader-admin

@@ -22,7 +22,7 @@
       "BOT_API": "http://localhost:3002",
       "TELEGRAM_TOKEN": "TELEGRAM_TOKEN",
       "TELEGRAM_CHAT_ID": "TELEGRAM_CHAT_ID",
-      "PORT": "3000"
+      "PORT": "3003"
     }
   }, {
     "type": "node",
