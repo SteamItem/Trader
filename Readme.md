@@ -4,6 +4,7 @@ Trader main project. It makes easier to debug and maintain. This project include
 
 ## To Do
 
+- Gateway
 - Dependency Injection
 - Unit test
 - Separate Bot codes per website
