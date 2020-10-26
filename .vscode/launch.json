@@ -10,6 +10,7 @@
     "program": "./src/server.ts",
     "runtimeExecutable": "nodemon",
     "restart": true,
+    "console": "integratedTerminal",
     "cwd": "${workspaceFolder}/api",
     "env": {
       "NODE_ENV": "development",
@@ -28,6 +29,7 @@
     "program": "./src/server.ts",
     "runtimeExecutable": "nodemon",
     "restart": true,
+    "console": "integratedTerminal",
     "cwd": "${workspaceFolder}/puppet",
     "env": {
       "NODE_ENV": "development",
@@ -42,6 +44,7 @@
     "program": "./src/server.ts",
     "runtimeExecutable": "nodemon",
     "restart": true,
+    "console": "integratedTerminal",
     "cwd": "${workspaceFolder}/bot",
     "env": {
       "NODE_ENV": "development",
@@ -58,6 +61,7 @@
     "program": "./server.js",
     "runtimeExecutable": "nodemon",
     "restart": true,
+    "console": "integratedTerminal",
     "cwd": "${workspaceFolder}/gateway",
     "env": {
       "NODE_ENV": "development",
@@ -71,6 +75,7 @@
     "type": "node",
     "request": "launch",
     "cwd": "${workspaceRoot}/admin",
+    "console": "integratedTerminal",
     "runtimeExecutable": "npm",
     "env": {
       "VUE_APP_API_URL": "http://localhost:3000"
@@ -79,9 +84,20 @@
       "run-script", "serve"
     ],
     "port": 5858
+  }, {
+    "type": "chrome",
+    "request": "launch",
+    "name": "Admin: chrome",
+    "url": "http://localhost:8080",
+    "cwd": "${workspaceRoot}/admin",
+    "webRoot": "${workspaceFolder}/src",
+    "breakOnLoad": true,
+    "sourceMapPathOverrides": {
+      "webpack:///src/*": "${webRoot}/*"
+    }
   }],
   "compounds": [{
     "name": "Debug All",
-    "configurations": ["Api", "Puppet", "Bot", "Gateway", "Admin"]
+    "configurations": ["Api", "Puppet", "Bot", "Gateway", "Admin", "Admin: chrome"]
   }]
 }
