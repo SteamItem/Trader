@@ -4,7 +4,9 @@ Trader main project. It makes easier to debug and maintain. This project include
 
 ## To Do
 
-- Gateway
+- Use UserId
+- Rename files
+- Separate Admin & User Panel
 - Dependency Injection
 - Unit test
 - Separate Bot codes per website
